@@ -67,17 +67,22 @@ namespace MazeGeneration2
 			// Small - 15, 29
 			// Medium - 25, 49
 			// Large - 31, 61
+			// Massive - 37,75
 			if (size == "small")
 			{
 				mazeArray = new bool[15, 29];
 			}
 			else if (size == "medium")
 			{
-				mazeArray = new bool[25, 49];
+				mazeArray = new bool[23, 45];
+			}
+			else if (size == "large")
+			{
+				mazeArray = new bool[31, 61];
 			}
 			else
 			{
-				mazeArray = new bool[31, 61];
+				mazeArray = new bool[37, 75];
 			}
 
 			List<(int, int)> frontiers = new List<(int, int)>();
@@ -406,6 +411,13 @@ namespace MazeGeneration2
 		{
 			size = "large";
 			countdownTime = 35;
+			ShowInstructionGrid();
+		}
+
+		private void Massive_Click(object sender, RoutedEventArgs e)
+		{
+			size = "xl";
+			countdownTime = 45;
 			ShowInstructionGrid();
 		}
 

@@ -42,7 +42,7 @@
             <TextBlock Grid.Row="2" Grid.Column="2" Text="warning: scary" Margin="10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Foreground="Red" FontSize="30"/>
         </Grid>
 
-        <Grid x:Name="SelectSizeGrid" Visibility="Hidden">
+        <Grid x:Name="SelectSizeGrid" Visibility="Visible">
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
                 <RowDefinition/>
@@ -52,8 +52,9 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Viewbox Grid.ColumnSpan="3">
+            <Viewbox Grid.ColumnSpan="4">
                 <TextBlock Text="select maze size" Foreground="White" Margin="10"/>
             </Viewbox>
             <Button Grid.Row="1" Grid.Column="0" FontSize="30" BorderBrush="White" BorderThickness="1" Background="Green" Margin="10" Click="Small_Click">
@@ -69,6 +70,11 @@
             <Button Grid.Row="1" Grid.Column="2" FontSize="30" BorderBrush="White" BorderThickness="1" Background="Red" Margin="10" Click="Large_Click">
                 <Viewbox>
                     <TextBlock Text="large" Margin="10" Foreground="White"/>
+                </Viewbox>
+            </Button>
+            <Button Grid.Row="1" Grid.Column="3" FontSize="30" BorderBrush="White" BorderThickness="1" Background="DarkRed" Margin="10" Click="Massive_Click">
+                <Viewbox>
+                    <TextBlock Text="massive" Margin="10" Foreground="White"/>
                 </Viewbox>
             </Button>
         </Grid>
